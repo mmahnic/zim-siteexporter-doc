@@ -114,7 +114,12 @@ function displayBurgerMenu() {
 <section id="windows-prerequisites" class="level3">
 <h3>Windows prerequisites</h3>
 <p>It is not possible to install additional Python modules to the &quot;compiled&quot; version of Zim for Windows so a workaround is used:</p>
-<p>On Windows the following modules must be manually copied to <code>winmodules</code> from the modules installed in a normal Python 2.7 installation or a virtual environment: - pyyaml: copy lib/yaml/* to winmodules/yaml/ - dateutil: copy dateutil/* to winmodules/dateutil/ - six: copy six.py to winmodules/</p>
+<p>On Windows the following modules must be manually copied to <code>winmodules</code> from the modules installed in a normal Python 2.7 installation or a virtual environment:</p>
+<ul>
+<li>pyyaml: copy lib/yaml/* to winmodules/yaml/</li>
+<li>dateutil: copy dateutil/* to winmodules/dateutil/</li>
+<li>six: copy six.py to winmodules/</li>
+</ul>
 <p>The path to <code>winmodules</code> is: %APPDATA%/zim/data/zim/plugins/siteexporter/winmodules</p>
 </section>
 </section>
