@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Zim Help: Template Variables | Site Exporter</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="../00/layout/w3css/default.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="w3-black banner">&nbsp;</div>
+
+
+<div id="top-navindex" class="w3-top">
+<div class="w3-bar w3-black">
+<nav>
+   <a href="../index.html" class="w3-bar-item w3-button w3-blue w3-hide-small">&#x2302;</a>
+   <a href="../operation.html" class="w3-bar-item w3-button w3-hide-small">Operation</a>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Configuration</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="../configuration.html" class="w3-bar-item w3-button w3-hide-small">Configuration</a>
+           <a href="../configuration/layout.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Layout</a>
+           <a href="../configuration/translation.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Translations</a>
+      </div>
+   </div>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Content</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="../content.html" class="w3-bar-item w3-button w3-hide-small">Content</a>
+           <a href="../content/attribute.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Attributes</a>
+           <a href="../content/menu.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Menus</a>
+           <a href="../content/excerpt.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Page Excerpt</a>
+      </div>
+   </div>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Page Type</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="../page-type.html" class="w3-bar-item w3-button w3-hide-small">Page Type</a>
+           <a href="../page-type/news.html" class="w3-bar-item w3-button w3-hide-small nav-level1">News</a>
+             <a href="../page-type/news/news-example.html" class="w3-bar-item w3-button w3-hide-small nav-level2">Git log</a>
+           <a href="../page-type/redirect.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Redirect</a>
+      </div>
+   </div>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Templates</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="../template.html" class="w3-bar-item w3-button w3-hide-small">Templates</a>
+           <a href="variables.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Variables</a>
+      </div>
+   </div>
+   <a href="../installation.html" class="w3-bar-item w3-button w3-hide-small">Installation</a>
+   <a href="../index.html" class="w3-bar-item w3-button w3-blue w3-hide-medium w3-hide-large">&#x2302;</a>
+   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large" onclick="displayBurgerMenu()">&#9776;</a>
+</nav>
+</div>
+</div>
+
+<div id="inline-navindex" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+   <a href="../operation.html" class="w3-bar-item w3-button">Operation</a>
+   <a href="../configuration.html" class="w3-bar-item w3-button">Configuration</a>
+     <a href="../configuration/layout.html" class="w3-bar-item w3-button nav-level1">Layout</a>
+     <a href="../configuration/translation.html" class="w3-bar-item w3-button nav-level1">Translations</a>
+   <a href="../content.html" class="w3-bar-item w3-button">Content</a>
+     <a href="../content/attribute.html" class="w3-bar-item w3-button nav-level1">Attributes</a>
+     <a href="../content/menu.html" class="w3-bar-item w3-button nav-level1">Menus</a>
+     <a href="../content/excerpt.html" class="w3-bar-item w3-button nav-level1">Page Excerpt</a>
+   <a href="../page-type.html" class="w3-bar-item w3-button">Page Type</a>
+     <a href="../page-type/news.html" class="w3-bar-item w3-button nav-level1">News</a>
+       <a href="../page-type/news/news-example.html" class="w3-bar-item w3-button nav-level2">Git log</a>
+     <a href="../page-type/redirect.html" class="w3-bar-item w3-button nav-level1">Redirect</a>
+   <a href="../template.html" class="w3-bar-item w3-button">Templates</a>
+     <a href="variables.html" class="w3-bar-item w3-button nav-level1">Variables</a>
+   <a href="../installation.html" class="w3-bar-item w3-button">Installation</a>
+<script>
+function displayBurgerMenu() {
+    var nav = document.getElementById("inline-navindex");
+    if ( nav == null )
+       return;
+    if (nav.className.indexOf("w3-show") < 0) {
+        nav.className += " w3-show";
+        nav.scrollIntoView();
+        var bar = document.getElementById("top-navindex");
+        if ( bar != null )
+           window.scrollBy( 0, -bar.clientHeight );
+    } else { 
+        nav.className = nav.className.replace(" w3-show", "");
+    }
+}
+</script>
+</div>
+
+<div id="main-wrapper" class="w3-container">
+<header id="title-block-header">
+<h1 class="title">Template Variables</h1>
+</header>
+<main>
+<p>When the exporter processes a page it generates a dictionary with variables that can be used in Pandoc templates. The dictionary is written into the YAML entry <code>sx</code> of the markdown page.</p>
+<ul>
+<li><em>sx.navindex</em> - The index generated from published pages with the <em>menu</em> attribute. The variable is a list of records with the following members:
+<ul>
+<li><em>id</em> - The Zim id of the page.</li>
+<li><em>display</em> - The value of the <em>menu</em> attribute of the page.</li>
+<li><em>link</em> - A link to the page. The link is relative to the page that is being exported.</li>
+<li><em>items</em> - The list of items of a submenu. Exists only when a submenu exists.</li>
+</ul></li>
+<li><em>sx.tr</em> - The dictionary with the translated template variables.</li>
+<li><em>sx.res</em> - The dictionary with page-relative paths to custom resurce files from the layout used by the template.</li>
+<li><em>sx.home</em> - A link to the home page. The link is relative to the page that is being exported. The value is calculated from the <em>home</em> attribute in the <a href="../configuration.html">configuration</a>.</li>
+<li><em>sx.main-css</em> - A link to the main CSS. The link is relative to the page that is being exported.</li>
+<li><em>sx.meta-title</em> - The <em>metaTitle</em> (<a href="../content/attribute.html">attribute</a>) of the page with added <em>titlePrefix</em> and <em>titleSuffix</em> (<a href="../configuration.html">configuration</a>).</li>
+<li><em>sx.news-activeitems</em>: Generated for pages of type '<em>news</em>' and contains the list of page's children that are published and not expired. Each child is described with a dictionary:
+<ul>
+<li><em>id</em> - The Zim id of the page.</li>
+<li><em>title</em> - The title of the page.</li>
+<li><em>link</em> - A link to the child page. The link is relative to the page that is being exported.</li>
+<li><em>brief</em> - The brief text (<a href="../content/excerpt.html">excerpt</a>) of the child page.</li>
+<li><em>date</em> - The date the page was published.</li>
+</ul></li>
+</ul>
+<p>Other entries in <code>sx</code> are the variables from the original page that were not redefined by the exporter.</p>
+</main>
+</div>
+</body>
+</html>
+

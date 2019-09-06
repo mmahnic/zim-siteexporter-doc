@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Zim Help: Page Attributes | Site Exporter</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="../00/layout/w3css/default.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="w3-black banner">&nbsp;</div>
+
+
+<div id="top-navindex" class="w3-top">
+<div class="w3-bar w3-black">
+<nav>
+   <a href="../index.html" class="w3-bar-item w3-button w3-blue w3-hide-small">&#x2302;</a>
+   <a href="../operation.html" class="w3-bar-item w3-button w3-hide-small">Operation</a>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Configuration</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="../configuration.html" class="w3-bar-item w3-button w3-hide-small">Configuration</a>
+           <a href="../configuration/layout.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Layout</a>
+           <a href="../configuration/translation.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Translations</a>
+      </div>
+   </div>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Content</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="../content.html" class="w3-bar-item w3-button w3-hide-small">Content</a>
+           <a href="attribute.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Attributes</a>
+           <a href="menu.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Menus</a>
+           <a href="excerpt.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Page Excerpt</a>
+      </div>
+   </div>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Page Type</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="../page-type.html" class="w3-bar-item w3-button w3-hide-small">Page Type</a>
+           <a href="../page-type/news.html" class="w3-bar-item w3-button w3-hide-small nav-level1">News</a>
+             <a href="../page-type/news/news-example.html" class="w3-bar-item w3-button w3-hide-small nav-level2">Git log</a>
+           <a href="../page-type/redirect.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Redirect</a>
+      </div>
+   </div>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Templates</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="../template.html" class="w3-bar-item w3-button w3-hide-small">Templates</a>
+           <a href="../template/variables.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Variables</a>
+      </div>
+   </div>
+   <a href="../installation.html" class="w3-bar-item w3-button w3-hide-small">Installation</a>
+   <a href="../index.html" class="w3-bar-item w3-button w3-blue w3-hide-medium w3-hide-large">&#x2302;</a>
+   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large" onclick="displayBurgerMenu()">&#9776;</a>
+</nav>
+</div>
+</div>
+
+<div id="inline-navindex" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+   <a href="../operation.html" class="w3-bar-item w3-button">Operation</a>
+   <a href="../configuration.html" class="w3-bar-item w3-button">Configuration</a>
+     <a href="../configuration/layout.html" class="w3-bar-item w3-button nav-level1">Layout</a>
+     <a href="../configuration/translation.html" class="w3-bar-item w3-button nav-level1">Translations</a>
+   <a href="../content.html" class="w3-bar-item w3-button">Content</a>
+     <a href="attribute.html" class="w3-bar-item w3-button nav-level1">Attributes</a>
+     <a href="menu.html" class="w3-bar-item w3-button nav-level1">Menus</a>
+     <a href="excerpt.html" class="w3-bar-item w3-button nav-level1">Page Excerpt</a>
+   <a href="../page-type.html" class="w3-bar-item w3-button">Page Type</a>
+     <a href="../page-type/news.html" class="w3-bar-item w3-button nav-level1">News</a>
+       <a href="../page-type/news/news-example.html" class="w3-bar-item w3-button nav-level2">Git log</a>
+     <a href="../page-type/redirect.html" class="w3-bar-item w3-button nav-level1">Redirect</a>
+   <a href="../template.html" class="w3-bar-item w3-button">Templates</a>
+     <a href="../template/variables.html" class="w3-bar-item w3-button nav-level1">Variables</a>
+   <a href="../installation.html" class="w3-bar-item w3-button">Installation</a>
+<script>
+function displayBurgerMenu() {
+    var nav = document.getElementById("inline-navindex");
+    if ( nav == null )
+       return;
+    if (nav.className.indexOf("w3-show") < 0) {
+        nav.className += " w3-show";
+        nav.scrollIntoView();
+        var bar = document.getElementById("top-navindex");
+        if ( bar != null )
+           window.scrollBy( 0, -bar.clientHeight );
+    } else { 
+        nav.className = nav.className.replace(" w3-show", "");
+    }
+}
+</script>
+</div>
+
+<div id="main-wrapper" class="w3-container">
+<header id="title-block-header">
+<h1 class="title">Page Attributes</h1>
+</header>
+<main>
+<p>Page attributes are defined in YAML blocks of code at the beginning of a page. The values of some attributes are taken from parent pages if they are not defined on a page.</p>
+<ul>
+<li><em>title</em> - The title of the page. If it is not set, the Zim page title is used.</li>
+<li><em>metaTitle</em> - Explicitly set the the HTML head title. If it is not set the <em>title</em> is used as <em>metaTitle</em>. This attribute is rarely used.</li>
+<li><em>menu</em> - Set the string that will be displayed in the menu. If <em>menu</em> is not set the page will not appear in the menu. See <a href="./menu.html">menu</a>.</li>
+<li><em>weight</em> - Set the order of an item in the generated menu. See <a href="./menu.html">menu</a>.</li>
+<li><em>publish</em> - When set to '<em>true</em>' the page will be published. When set to '<em>false</em>' the final page will not be generated. The <em>publish</em> attribute is inherited from parent pages if it is not defined. The attributes <em>publishDate</em> and <em>unpublishDate</em> may override the value of <em>publish</em> when <em>publish</em> is '<em>true</em>'.</li>
+<li><em>draft</em> - When set to 'true' the page is a draft and will not be published. The final page will not be generated. The <em>publish</em> attribute is inherited from parent pages if it is not defined.</li>
+<li><em>createDate</em> - The date when a page was created. If it is not set explicitly the Zim page attribute will be used.</li>
+<li><em>expireDate</em> - The date when a page will become old. This can be used in news and blogs to remove the page from lists of latest items.</li>
+<li><em>publishDate</em> - The date when a page should be published. The final page will not be generated before this date. Creation date is used if this is not set. The <em>publishDate</em> attribute is inherited from parent pages if it is not defined.</li>
+<li><em>unpublishDate</em> - The date after which a page will not be published any more. The final page will not be generated after this date. The <em>unpublishDate</em> attribute is inherited from parent pages if it is not defined.</li>
+<li><em>type</em> - The type of the page. A custom page processor will be selected for a page type if was registered. Custom template and CSS flie will be selected for a page type if it exists unless they are explicitly defined for the page. See <a href="../page-type.html">page-type</a>.</li>
+<li><em>template</em> - The filename without extension of the custom template and CSS file to be used to generate the page.</li>
+<li><em>childType</em> - The page type for descendant pages that do not explicitly define <em>type</em>.</li>
+<li><em>lang</em> - The language of the page. This affects the translation of variables gathered during the template processing phase. The <em>lang</em> attribute is inherited from parent pages if it is not defined. If no parent has the <em>lang</em> attribute set, the default language is obtained from the configuration.</li>
+</ul>
+</main>
+</div>
+</body>
+</html>
+

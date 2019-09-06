@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Zim Help: Configuration | Site Exporter</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="00/layout/w3css/default.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="w3-black banner">&nbsp;</div>
+
+
+<div id="top-navindex" class="w3-top">
+<div class="w3-bar w3-black">
+<nav>
+   <a href="index.html" class="w3-bar-item w3-button w3-blue w3-hide-small">&#x2302;</a>
+   <a href="operation.html" class="w3-bar-item w3-button w3-hide-small">Operation</a>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Configuration</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="configuration.html" class="w3-bar-item w3-button w3-hide-small">Configuration</a>
+           <a href="configuration/layout.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Layout</a>
+           <a href="configuration/translation.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Translations</a>
+      </div>
+   </div>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Content</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="content.html" class="w3-bar-item w3-button w3-hide-small">Content</a>
+           <a href="content/attribute.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Attributes</a>
+           <a href="content/menu.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Menus</a>
+           <a href="content/excerpt.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Page Excerpt</a>
+      </div>
+   </div>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Page Type</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="page-type.html" class="w3-bar-item w3-button w3-hide-small">Page Type</a>
+           <a href="page-type/news.html" class="w3-bar-item w3-button w3-hide-small nav-level1">News</a>
+             <a href="page-type/news/news-example.html" class="w3-bar-item w3-button w3-hide-small nav-level2">Git log</a>
+           <a href="page-type/redirect.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Redirect</a>
+      </div>
+   </div>
+   <div class="w3-dropdown-hover">
+      <button class="w3-button w3-black w3-hide-small nav-dropdown">Templates</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+         <a href="template.html" class="w3-bar-item w3-button w3-hide-small">Templates</a>
+           <a href="template/variables.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Variables</a>
+      </div>
+   </div>
+   <a href="installation.html" class="w3-bar-item w3-button w3-hide-small">Installation</a>
+   <a href="index.html" class="w3-bar-item w3-button w3-blue w3-hide-medium w3-hide-large">&#x2302;</a>
+   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large" onclick="displayBurgerMenu()">&#9776;</a>
+</nav>
+</div>
+</div>
+
+<div id="inline-navindex" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+   <a href="operation.html" class="w3-bar-item w3-button">Operation</a>
+   <a href="configuration.html" class="w3-bar-item w3-button">Configuration</a>
+     <a href="configuration/layout.html" class="w3-bar-item w3-button nav-level1">Layout</a>
+     <a href="configuration/translation.html" class="w3-bar-item w3-button nav-level1">Translations</a>
+   <a href="content.html" class="w3-bar-item w3-button">Content</a>
+     <a href="content/attribute.html" class="w3-bar-item w3-button nav-level1">Attributes</a>
+     <a href="content/menu.html" class="w3-bar-item w3-button nav-level1">Menus</a>
+     <a href="content/excerpt.html" class="w3-bar-item w3-button nav-level1">Page Excerpt</a>
+   <a href="page-type.html" class="w3-bar-item w3-button">Page Type</a>
+     <a href="page-type/news.html" class="w3-bar-item w3-button nav-level1">News</a>
+       <a href="page-type/news/news-example.html" class="w3-bar-item w3-button nav-level2">Git log</a>
+     <a href="page-type/redirect.html" class="w3-bar-item w3-button nav-level1">Redirect</a>
+   <a href="template.html" class="w3-bar-item w3-button">Templates</a>
+     <a href="template/variables.html" class="w3-bar-item w3-button nav-level1">Variables</a>
+   <a href="installation.html" class="w3-bar-item w3-button">Installation</a>
+<script>
+function displayBurgerMenu() {
+    var nav = document.getElementById("inline-navindex");
+    if ( nav == null )
+       return;
+    if (nav.className.indexOf("w3-show") < 0) {
+        nav.className += " w3-show";
+        nav.scrollIntoView();
+        var bar = document.getElementById("top-navindex");
+        if ( bar != null )
+           window.scrollBy( 0, -bar.clientHeight );
+    } else { 
+        nav.className = nav.className.replace(" w3-show", "");
+    }
+}
+</script>
+</div>
+
+<div id="main-wrapper" class="w3-container">
+<header id="title-block-header">
+<h1 class="title">Configuration</h1>
+</header>
+<main>
+<p>The configuration of the site is stored under the page <a href="./00.html">00</a>. The relative path to the active configuration is stored in the <em>active</em> attribute of the page <a href="./00/00.config.html">00:00.config</a> .</p>
+<p>Configuration page attributes are inherited from parent pages. Attributes defined in a child page override the same attributes defined in parent pages. Dictionary and list attributes are not merged. Instead, a top-level attribute of the parent is replaced with a new one with the same name from the child.</p>
+<p>The active configuration defines a page where the selected layout for the generated site is stored.</p>
+</main>
+</div>
+</body>
+</html>
+
