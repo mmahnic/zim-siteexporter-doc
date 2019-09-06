@@ -126,8 +126,10 @@ function displayBurgerMenu() {
 <section id="installation" class="level2">
 <h2>Installation</h2>
 <p>Copy the Python code to the Zim plugin directory. The following script can be executed on Linux from the siteexporter subdirectory:</p>
-<p><strong>publish.sh</strong> #!/usr/bin/env bash</p>
-<pre><code>zimdir=&quot;~/.local/share/zim&quot;
+<p><strong>publish.sh</strong></p>
+<pre><code>#!/usr/bin/env bash
+
+zimdir=&quot;~/.local/share/zim&quot;
 zimdir=&quot;${zimdir/#\~/$HOME}&quot;
 plugdir=${zimdir}/plugins
 siteexdir=${plugdir}/siteexporter
