@@ -29,7 +29,8 @@
       <button class="w3-button w3-black w3-hide-small nav-dropdown">Configuration</button>
       <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
          <a href="configuration.html" class="w3-bar-item w3-button w3-hide-small">Configuration</a>
-           <a href="configuration/layout.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Layout</a>
+           <a href="configuration/attribute.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Attributes</a>
+           <a href="configuration/layout.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Layout selection</a>
            <a href="configuration/translation.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Translations</a>
       </div>
    </div>
@@ -68,7 +69,8 @@
 <div id="inline-navindex" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
    <a href="operation.html" class="w3-bar-item w3-button">Operation</a>
    <a href="configuration.html" class="w3-bar-item w3-button">Configuration</a>
-     <a href="configuration/layout.html" class="w3-bar-item w3-button nav-level1">Layout</a>
+     <a href="configuration/attribute.html" class="w3-bar-item w3-button nav-level1">Attributes</a>
+     <a href="configuration/layout.html" class="w3-bar-item w3-button nav-level1">Layout selection</a>
      <a href="configuration/translation.html" class="w3-bar-item w3-button nav-level1">Translations</a>
    <a href="content.html" class="w3-bar-item w3-button">Content</a>
      <a href="content/attribute.html" class="w3-bar-item w3-button nav-level1">Attributes</a>
@@ -107,7 +109,7 @@ function displayBurgerMenu() {
 <p>The pages are exported from Zim to a temporary location with the default Markdown template. After the Markdown files are preporcessed in the temporary location, they are converted to HTML with Pandoc.</p>
 <section id="pandoc-template-selection" class="level3">
 <h3>Pandoc template selection</h3>
-<p>The exporter uses Pandoc to convert Markdown files to HTML5. The exporter expects the templates in the selected layout to have the extension '.html5'. A Pandoc template can be selected for each page. The exporter first checks if a specific template for a page exists. The name of the specific template is obtained from the <em>template</em> attribute. If a <em>type</em> attribute is defined for the page, the exporter checks if a template for the page type exists. The name of the page-type specific template is obtained by adding '@' to the beginnin and the end of the type name, eg. '<span class="citation" data-cites="news">@news</span>@.html5'. If no specific templates are found, the template 'default.html5' is used.</p>
+<p>The exporter uses Pandoc to convert Markdown files to HTML5. The exporter expects the templates in the selected layout to have the extension '.html5'. A Pandoc template can be selected for each page. The exporter first checks if a specific template for a page exists. The name of the specific template is obtained from the <em>template</em> attribute. If a <em>type</em> attribute is defined for the page, the exporter checks if a template for the page type exists. The name of the page-type specific template is obtained by adding '@' to the beginning and the end of the type name, eg. '<span class="citation" data-cites="news">@news</span>@.html5'. If no specific templates are found, the template 'default.html5' is used.</p>
 </section>
 <section id="pandoc-template-preprocessing" class="level3">
 <h3>Pandoc template preprocessing</h3>

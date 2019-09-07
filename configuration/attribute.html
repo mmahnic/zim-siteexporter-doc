@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Zim Help: Type: news | Site Exporter</title>
+  <title>Zim Help: Configuration page attributes | Site Exporter</title>
   <style type="text/css">
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -29,9 +29,9 @@
       <button class="w3-button w3-black w3-hide-small nav-dropdown">Configuration</button>
       <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
          <a href="../configuration.html" class="w3-bar-item w3-button w3-hide-small">Configuration</a>
-           <a href="../configuration/attribute.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Attributes</a>
-           <a href="../configuration/layout.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Layout selection</a>
-           <a href="../configuration/translation.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Translations</a>
+           <a href="attribute.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Attributes</a>
+           <a href="layout.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Layout selection</a>
+           <a href="translation.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Translations</a>
       </div>
    </div>
    <div class="w3-dropdown-hover">
@@ -47,9 +47,9 @@
       <button class="w3-button w3-black w3-hide-small nav-dropdown">Page Type</button>
       <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
          <a href="../page-type.html" class="w3-bar-item w3-button w3-hide-small">Page Type</a>
-           <a href="news.html" class="w3-bar-item w3-button w3-hide-small nav-level1">News</a>
-             <a href="news/news-example.html" class="w3-bar-item w3-button w3-hide-small nav-level2">Git log</a>
-           <a href="redirect.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Redirect</a>
+           <a href="../page-type/news.html" class="w3-bar-item w3-button w3-hide-small nav-level1">News</a>
+             <a href="../page-type/news/news-example.html" class="w3-bar-item w3-button w3-hide-small nav-level2">Git log</a>
+           <a href="../page-type/redirect.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Redirect</a>
       </div>
    </div>
    <div class="w3-dropdown-hover">
@@ -69,17 +69,17 @@
 <div id="inline-navindex" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
    <a href="../operation.html" class="w3-bar-item w3-button">Operation</a>
    <a href="../configuration.html" class="w3-bar-item w3-button">Configuration</a>
-     <a href="../configuration/attribute.html" class="w3-bar-item w3-button nav-level1">Attributes</a>
-     <a href="../configuration/layout.html" class="w3-bar-item w3-button nav-level1">Layout selection</a>
-     <a href="../configuration/translation.html" class="w3-bar-item w3-button nav-level1">Translations</a>
+     <a href="attribute.html" class="w3-bar-item w3-button nav-level1">Attributes</a>
+     <a href="layout.html" class="w3-bar-item w3-button nav-level1">Layout selection</a>
+     <a href="translation.html" class="w3-bar-item w3-button nav-level1">Translations</a>
    <a href="../content.html" class="w3-bar-item w3-button">Content</a>
      <a href="../content/attribute.html" class="w3-bar-item w3-button nav-level1">Attributes</a>
      <a href="../content/menu.html" class="w3-bar-item w3-button nav-level1">Menus</a>
      <a href="../content/excerpt.html" class="w3-bar-item w3-button nav-level1">Page Excerpt</a>
    <a href="../page-type.html" class="w3-bar-item w3-button">Page Type</a>
-     <a href="news.html" class="w3-bar-item w3-button nav-level1">News</a>
-       <a href="news/news-example.html" class="w3-bar-item w3-button nav-level2">Git log</a>
-     <a href="redirect.html" class="w3-bar-item w3-button nav-level1">Redirect</a>
+     <a href="../page-type/news.html" class="w3-bar-item w3-button nav-level1">News</a>
+       <a href="../page-type/news/news-example.html" class="w3-bar-item w3-button nav-level2">Git log</a>
+     <a href="../page-type/redirect.html" class="w3-bar-item w3-button nav-level1">Redirect</a>
    <a href="../template.html" class="w3-bar-item w3-button">Templates</a>
      <a href="../template/variables.html" class="w3-bar-item w3-button nav-level1">Variables</a>
    <a href="../installation.html" class="w3-bar-item w3-button">Installation</a>
@@ -103,20 +103,19 @@ function displayBurgerMenu() {
 
 <div id="main-wrapper" class="w3-container">
 <header id="title-block-header">
-<h1 class="title">Type: news</h1>
+<h1 class="title">Configuration page attributes</h1>
 </header>
 <main>
+<p>Configuration attributes are defined in YAML blocks near the beginning of a page. Configuration attributes are inherited from parent pages. Attributes defined in a child page override the attributes defined in parent pages. Dictionary and list attributes are not merged. The top-level attribute is replaced with a new one, instead.</p>
 <ul>
-<li>collect children</li>
-<li>prepare a list of excerpts of published children</li>
-<li>excerpt: up to <!--more--> or the first 300 charactres or up to the first heading</li>
+<li><em>lang</em>: the default language of the site. If the default language is not set in configuration and an exported page does not define the <em>lang</em> attribute, the current system locale language will be used.</li>
+<li><em>home</em>: an absolute Zim path to the page that is the homepage of the site.</li>
+<li><em>active</em>: a relative Zim path to the active configuration for the site exporter.</li>
+<li><em>titlePrefix</em>: the string to prepend to the meta-title value.</li>
+<li><em>titleSuffix</em>: the string to append to the meta-title value.</li>
+<li><em>layout</em>: an absolute Zim path to the layout that will be used to generate the site. This attribute is usually defined in the active configuration page.</li>
+<li><em>pbudir</em>: the directory where the site should be built. Relative paths are relative to the root directory of the notebook. The pages are first exported to a temporary directory where they are processed. The generated final files are copied to <em>pubdir</em> afterwards.</li>
 </ul>
-<p>Attributes:</p>
-<ul>
-<li>createDate, publishDate, expireDate, unpublishDate</li>
-<li>draft</li>
-</ul>
-<p>Example: <a href="./news/news-example.html">Git log</a></p>
 </main>
 </div>
 </body>

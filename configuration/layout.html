@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Zim Help: Layout | Site Exporter</title>
+  <title>Zim Help: Layout selection | Site Exporter</title>
   <style type="text/css">
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,8 @@
       <button class="w3-button w3-black w3-hide-small nav-dropdown">Configuration</button>
       <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
          <a href="../configuration.html" class="w3-bar-item w3-button w3-hide-small">Configuration</a>
-           <a href="layout.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Layout</a>
+           <a href="attribute.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Attributes</a>
+           <a href="layout.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Layout selection</a>
            <a href="translation.html" class="w3-bar-item w3-button w3-hide-small nav-level1">Translations</a>
       </div>
    </div>
@@ -68,7 +69,8 @@
 <div id="inline-navindex" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
    <a href="../operation.html" class="w3-bar-item w3-button">Operation</a>
    <a href="../configuration.html" class="w3-bar-item w3-button">Configuration</a>
-     <a href="layout.html" class="w3-bar-item w3-button nav-level1">Layout</a>
+     <a href="attribute.html" class="w3-bar-item w3-button nav-level1">Attributes</a>
+     <a href="layout.html" class="w3-bar-item w3-button nav-level1">Layout selection</a>
      <a href="translation.html" class="w3-bar-item w3-button nav-level1">Translations</a>
    <a href="../content.html" class="w3-bar-item w3-button">Content</a>
      <a href="../content/attribute.html" class="w3-bar-item w3-button nav-level1">Attributes</a>
@@ -101,10 +103,23 @@ function displayBurgerMenu() {
 
 <div id="main-wrapper" class="w3-container">
 <header id="title-block-header">
-<h1 class="title">Layout</h1>
+<h1 class="title">Layout selection</h1>
 </header>
 <main>
-<p>A layout defines a set of templates and resources that are used to generate the site. A layout is selected with the <em>layout</em> attribute of the current <a href="../configuration.html">configuration</a>. The layouts are usually stored under <a href="../00/layout.html">00:layout</a>.</p>
+<p>A layout defines a set of templates and resources that are used to generate the site. The layouts are usually stored under <a href="../00/layout.html">00:layout</a>. A layout may include:</p>
+<ul>
+<li>Pandoc templates.</li>
+<li>Translations for the templates.</li>
+<li>CSS files.</li>
+<li>Other files that go into site resources.</li>
+</ul>
+<p>To select a layout for the site:</p>
+<ul>
+<li>Define the <em>active</em> attribute on the <em>00:00.config</em> page to select the active configuration. The attribute represents a Zim path relative to <em>00:00.config</em>, for example with <code>active: &quot;example&quot;</code> we select the configuration page <em>00:00.config:example</em>.</li>
+<li>Define the <em>layout</em> attribute on the <em>00:00.config:example</em> page. The attribute represents an absolute Zim path to the page with the layout definition, for example <code>layout: &quot;00:layout:w3css&quot;</code>.</li>
+<li>Define the <a href="../template.html">templates</a> for the site as attachments of the page defined in the <em>layout</em> attribute.</li>
+<li>Define the <a href="./translation.html">transaltions</a> for the template variables in subpages of the layout page.</li>
+</ul>
 </main>
 </div>
 </body>
